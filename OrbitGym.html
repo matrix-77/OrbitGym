@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORBIT Gym | Jabalpur's Premier Fitness Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glass-nav {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .accent-border {
+            border-left: 4px solid #ef4444;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-2">
+                    <div class="bg-red-600 p-2 rounded-lg">
+                        <i class="fas fa-dumbbell text-white text-2xl"></i>
+                    </div>
+                    <a href="#home"><span class="text-2xl font-extrabold tracking-tighter uppercase">ORBIT <span class="text-red-600">GYM</span></span></a><span class="text-2xl font-extrabold tracking-tighter uppercase"></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 uppercase text-sm font-semibold tracking-wider">
+                        <a href="#home" class="hover:text-red-500 transition-colors">Home</a>
+                        <a href="#about" class="hover:text-red-500 transition-colors">About</a>
+                        <a href="#services" class="hover:text-red-500 transition-colors">Services</a>
+                        <a href="#hours" class="hover:text-red-500 transition-colors">Hours</a>
+                        <a href="#contact" class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full transition-all">Join Now</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 text-gray-400 hover:text-white">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 px-4 pt-2 pb-6 space-y-4 border-b border-gray-800">
+            <a href="#home" class="block hover:text-red-500">Home</a>
+            <a href="#about" class="block hover:text-red-500">About</a>
+            <a href="#services" class="block hover:text-red-500">Services</a>
+            <a href="#hours" class="block hover:text-red-500">Hours</a>
+            <a href="#contact" class="block bg-red-600 text-center py-2 rounded">Join Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-8xl font-black mb-6 uppercase tracking-tighter">
+                Evolve Your <span class="text-red-600">Limits</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
+                Premium fitness facility in Jabalpur designed to push you further. 
+                Train with elite equipment in an environment built for results.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-full text-lg font-bold transition-all shadow-lg shadow-red-600/20">
+                    Get Started
+                </a>
+                <a href="#hours" class="border border-white/30 hover:bg-white/10 text-white px-10 py-4 rounded-full text-lg font-bold transition-all">
+                    View Timings
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Stats -->
+    <div class="relative -mt-16 z-10 max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-800 flex items-center gap-6">
+                <div class="bg-red-600/10 p-4 rounded-xl">
+                    <i class="fas fa-location-dot text-red-600 text-3xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl">Our Location</h3>
+                    <p class="text-gray-400 text-sm">Bilhari, Jabalpur</p>
+                </div>
+            </div>
+            <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-800 flex items-center gap-6">
+                <div class="bg-red-600/10 p-4 rounded-xl">
+                    <i class="fas fa-clock text-red-600 text-3xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl">Mon-Sat</h3>
+                    <p class="text-gray-400 text-sm">6:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+            <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-800 flex items-center gap-6">
+                <div class="bg-red-600/10 p-4 rounded-xl">
+                    <i class="fas fa-calendar-check text-red-600 text-3xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl">Sunday Sessions</h3>
+                    <p class="text-gray-400 text-sm">7:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-red-600"></div>
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Gym Equipment" class="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                <div class="absolute -bottom-6 -right-6 bg-red-600 p-6 rounded-2xl hidden lg:block">
+                    <p class="text-4xl font-black">10+</p>
+                    <p class="text-sm font-bold uppercase">Years of Grit</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-red-600 font-bold tracking-widest uppercase mb-4">About Orbit Gym</h2>
+                <h3 class="text-4xl font-extrabold mb-6 leading-tight">Elevating Fitness Standards in Jabalpur</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed text-lg">
+                    Located on Mandla - Jabalpur Road in the heart of Bilhari, ORBIT Gym provides a high-energy atmosphere for athletes and beginners alike. We pride ourselves on maintaining a clean, professional, and motivating environment. 
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-check-circle text-red-600"></i>
+                        <span>Behind Baba Traders - Easy Access</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-check-circle text-red-600"></i>
+                        <span>State-of-the-Art Strength Equipment</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-check-circle text-red-600"></i>
+                        <span>Certified Personal Trainers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="bg-gray-900/50 py-24 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4 uppercase">Our Expertise</h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-10 rounded-3xl border border-gray-800 card-hover">
+                    <i class="fas fa-weight-hanging text-4xl text-red-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Strength Training</h3>
+                    <p class="text-gray-400">Extensive range of free weights, squat racks, and specialized machines to build peak power.</p>
+                </div>
+                <div class="bg-gray-900 p-10 rounded-3xl border border-gray-800 card-hover">
+                    <i class="fas fa-heartbeat text-4xl text-red-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Cardio Zone</h3>
+                    <p class="text-gray-400">Modern treadmills and cycles to improve cardiovascular health and boost endurance.</p>
+                </div>
+                <div class="bg-gray-900 p-10 rounded-3xl border border-gray-800 card-hover">
+                    <i class="fas fa-user-ninja text-4xl text-red-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Personal Coaching</h3>
+                    <p class="text-gray-400">One-on-one sessions tailored to your body type and specific fitness milestones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section id="hours" class="py-24 px-4 bg-black">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-12">Operating Hours</h2>
+            <div class="grid md:grid-cols-2 gap-px bg-gray-800 overflow-hidden rounded-2xl border border-gray-800 shadow-2xl">
+                <div class="bg-gray-950 p-12">
+                    <h4 class="text-red-600 font-bold mb-2">WEEKDAYS</h4>
+                    <div class="text-5xl font-black text-white">06:00 <span class="text-lg font-normal text-gray-400">AM</span></div>
+                    <div class="text-2xl my-2 text-gray-500">to</div>
+                    <div class="text-5xl font-black text-white">09:00 <span class="text-lg font-normal text-gray-400">PM</span></div>
+                </div>
+                <div class="bg-gray-950 p-12">
+                    <h4 class="text-red-600 font-bold mb-2">WEEKENDS</h4>
+                    <div class="text-5xl font-black text-white">07:00 <span class="text-lg font-normal text-gray-400">AM</span></div>
+                    <div class="text-2xl my-2 text-gray-500">to</div>
+                    <div class="text-5xl font-black text-white">11:00 <span class="text-lg font-normal text-gray-400">AM</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-extrabold mb-8 uppercase">Reach Out</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="text-red-600 text-2xl mt-1"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <p class="text-xl font-bold"><a href="https://mappls.com/c0a10o">Visit Us</a></p>
+                            <p class="text-gray-400 mt-2">Mandla - Jabalpur Rd, behind Baba Traders, Bilhari, Jabalpur, MP 482020</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-red-600 text-2xl mt-1"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <p class="text-xl font-bold"><a href="tel:+918319959714">Call Us</a></p>
+                            <p class="text-gray-400 mt-2">+91 8319959714</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-900 p-10 rounded-3xl border border-gray-800">
+                <h3 class="text-2xl font-bold mb-8">Claim Your Trial</h3>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Full Name</label>
+                        <input type="text" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-4 focus:border-red-600 outline-none transition-all" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Phone Number</label>
+                        <input type="tel" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-4 focus:border-red-600 outline-none transition-all" placeholder="Enter mobile number">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Interested In</label>
+                        <select class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-4 focus:border-red-600 outline-none transition-all">
+                            <option>Weight Loss</option>
+                            <option>Muscle Building</option>
+                            <option>General Fitness</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all uppercase tracking-widest">Send Message</button>
+                </form>
+                <div id="formMsg" class="hidden mt-4 p-4 bg-green-900/30 text-green-400 rounded-xl text-center border border-green-900">
+                    Your request has been sent! We'll call you soon.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-4 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-extrabold tracking-tighter uppercase">ORBIT<span class="text-red-600"> GYM</span></span>
+            </div>
+            <div class="flex gap-8 text-gray-400">
+                <a href="#" class="hover:text-red-500"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/orbit_gym_only?igsh=MWE3ZjdjOTRtOHg0Zw==" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Himanshu_classic" class="hover:text-red-500"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="text-gray-600 text-sm">© 2024 ORBIT Gym Bilhari. Fitness is a journey.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Form Submission logic
+        const form = document.getElementById('contactForm');
+        const msg = document.getElementById('formMsg');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.style.display = 'none';
+            msg.classList.remove('hidden');
+        });
+
+        // Smooth scroll adjustment for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+                
+                // Close mobile menu if open
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
