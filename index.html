@@ -276,7 +276,7 @@
                 <a href="https://www.instagram.com/orbit_gym_only?igsh=MWE3ZjdjOTRtOHg0Zw==" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.youtube.com/@Himanshu_classic" class="hover:text-red-500"><i class="fab fa-youtube"></i></a>
             </div>
-            <p class="text-gray-600 text-sm">© 2024 ORBIT Gym Bilhari. Fitness is a journey.</p>
+            <p class="text-gray-600 text-sm">© <span id="year"></span> ORBIT Gym Bilhari. Fitness is a journey.</p>
         </div>
     </footer>
 
@@ -312,6 +312,8 @@
                     top: offsetPosition,
                     behavior: "smooth"
                 });
+                // Year update
+                document.getElementById('year').innerText = new Date().getFullYear();
                 
                 // Close mobile menu if open
                 menu.classList.add('hidden');
@@ -320,4 +322,5 @@
     </script>
 </body>
 </html>
+
 
